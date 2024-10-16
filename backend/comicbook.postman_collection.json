@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "8f3b46a7-2610-42a2-888a-5b0dbefd1d49",
+		"name": "comicbook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37582524"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/api/comics?year=2002",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/comics?year=2002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"comics"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "2002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/api/comics?sortBy=price&order=desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/comics?sortBy=price&order=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"comics"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "price"
+						},
+						{
+							"key": "order",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/comics/670f758b05af8af8b78c4b8a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"comics",
+						"670f758b05af8af8b78c4b8a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"The Amazing Spider-Man\",\r\n  \"author\": \"Stan Lee\",\r\n  \"year\": 1963,\r\n  \"price\": 100,\r\n  \"discount\": 10,\r\n  \"pages\": 32,\r\n  \"condition\": \"new\", \r\n  \"description\": \"First appearance of Spider-Man.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/comics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"comics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"condition\":\"used\",\r\n    \"pages\":200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/comics/670f9cd9c7c03e3693ed0e49",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"comics",
+						"670f9cd9c7c03e3693ed0e49"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
